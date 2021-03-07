@@ -1,10 +1,9 @@
 import './App.css';
-import Watchlist from './watchlist.js';
-
+import WelcomeScreen from "./components/WelcomeScreen"
 
 function App() {
   return (
-      <Watchlist></Watchlist>
+    <WelcomeScreen></WelcomeScreen>
   )
 }
 

@@ -52,7 +52,6 @@ let watchList = [
        description: "The Goonies"
     },
  ]
- 
  export default class WatchList extends React.Component {
     constructor(props) {
        super(props)
@@ -83,16 +82,13 @@ let watchList = [
              {completed: false, description: prevValue, id: prevState.curId}],
           curId: prevState.curId+1
        }))
-       this.state.inputRef.current.value = ""
-
-       
-       //this.state.inputRef.current.value == ""
+       this.state.inputRef.current.value = ""       
     }
     render() {
        let watchList = this.state.watchList
        if (this.state.filtered) {
           watchList = watchList.filter(item=>!item.completed)
-       }
+       }         
          watchList = watchList.map((item) => (
           <div key={item.id}>
              <label>
@@ -100,7 +96,7 @@ let watchList = [
                 <span style={item.completed ? {textDecoration: "line-through"} : undefined}>{item.description}</span>
              </label>
           </div>
-         ))
+         )) 
        return ( 
        <>
           <h1>To Watch List - Film &amp; TV</h1>
@@ -120,4 +116,3 @@ let watchList = [
     }
  }
 
- 
